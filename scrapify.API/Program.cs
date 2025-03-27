@@ -1,8 +1,8 @@
-using Hangfire;
 using scrapify.API.Configuration;
 using scrapify.API.Interfaces;
 using scrapify.API.Jobs;
 using scrapify.API.Services;
+using scrapify.Scraper.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<IJobs, JobScheduler>();
+builder.Services.AddScraperServices();
 builder.AddHangfireService();
 
 

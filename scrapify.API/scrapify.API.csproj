@@ -22,7 +22,11 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\scrapify.Crawler\scrapify.Crawler.csproj" />
+      <ProjectReference Include="..\scrapify.Scraper\scrapify.Scraper.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="DataAccess\" />
     </ItemGroup>
 
 </Project>
