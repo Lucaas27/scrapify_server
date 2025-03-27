@@ -1,0 +1,18 @@
+services:
+  mongodb:
+    image: mongo:7
+    container_name: scrapify_mongodb
+    volumes:
+      - "mongodb_data:/data/db"
+    ports:
+      - '27017:27017'
+    restart: unless-stopped
+    healthcheck:
+      test: echo "db.serverStatus().ok" | mongo --quiet
+      interval: 5s
+      timeout: 30s
+      start_period: 0s
+      start_interval: 1s
+      retries: 30
+volumes:
+  mongodb_data:

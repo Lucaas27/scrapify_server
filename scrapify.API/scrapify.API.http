@@ -1,0 +1,6 @@
+@scrapify.API_HostAddress = http://localhost:5212
+
+GET {{scrapify.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
